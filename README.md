@@ -39,10 +39,23 @@ O projeto atua diretamente na redução da "ansiedade matemática", oferecendo:
 - **Framework:** Bootstrap 5.3 para estruturação ágil.
 
 ## 🚀 Como Executar
-O projeto não requer build ou pré-processadores.
-1. Clone o repositório:
-   `git clone https://github.com/seu-usuario/numerix-trilha-das-estrelas.git`
-2. Abra o arquivo `index.html` em qualquer navegador.
+O projeto não requer build ou pré-processadores. Siga os passos abaixo no seu terminal:
+
+```bash
+# Clone o repositório
+git clone https://github.com/FelipeBritoSP10/numerix-path-of-the-stars
+
+# Entre na pasta do projeto
+cd numerix-path-of-the-stars
+
+# Abra o arquivo index.html no navegador
+
+# Escolha o comando correspondente ao seu sistema:
+open index.html    # macOS
+start index.html   # Windows
+xdg-open index.html # Linux
+
+```
 
 ## 📈 Roadmap
 - [ ] **Modo Infinito:** Desafios progressivos com metas aleatórias.
