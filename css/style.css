@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Baloo+2:wght@500;600;700;800&display=swap');
+
+:root {
+    --bg-a: #eef6f5;
+    --bg-b: #e2f0ee;
+    --ink: #233b3f;
+    --ink-soft: #5c7377;
+    --teal: #2f8f8a;
+    --teal-deep: #1f6d69;
+    --sage: #6fae76;
+    --sage-deep: #4f8a56;
+    --amber: #e0a541;
+    --card-line: #dcece9;
+    --focus: #164b47;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    background: linear-gradient(180deg, var(--bg-a), var(--bg-b));
+    color: var(--ink);
+    min-height: 100vh;
+}
+
+.titulo-projeto {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    font-size: 2.9rem;
+    color: var(--teal-deep);
+}
+
+.subtitle {
+    color: var(--ink-soft);
+    font-size: 1.15rem;
+}
+
+.card-numerix {
+    border-radius: 32px !important;
+    box-shadow: 0 10px 30px rgba(31, 109, 105, 0.08);
+}
+
+.meta-label {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    color: var(--teal-deep);
+    font-size: 1.3rem;
+}
+
+.mascote {
+    width: 96px;
+    height: 96px;
+    transition: transform .3s ease;
+}
+
+.mascote.bounce {
+    animation: bounce .5s ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slot {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #eef6f5;
+    border: 2.5px solid var(--card-line);
+    font-weight: 700;
+    color: #9db3b1;
+    transition: .3s;
+}
+
+.slot.filled {
+    background: var(--teal);
+    border-color: var(--teal-deep);
+    color: white;
+    transform: scale(1.06);
+}
+
+.slot.filled.win {
+    background: var(--sage);
+    border-color: var(--sage-deep);
+    animation: pulse-slot .6s ease;
+}
+
+@keyframes pulse-slot {
+    0% {
+        transform: scale(1.06);
+    }
+
+    50% {
+        transform: scale(1.22);
+    }
+
+    100% {
+        transform: scale(1.06);
+    }
+}
+
+.total-box {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 5px solid var(--teal);
+    box-shadow: 0 8px 20px rgba(47, 143, 138, 0.18);
+}
+
+.total-box span {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 2.9rem;
+    font-weight: 800;
+    color: var(--teal-deep);
+}
+
+.feedback {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    min-height: 1.7em;
+}
+
+.feedback.win {
+    color: var(--sage-deep);
+}
+
+.btn-num {
+    border: 2.5px solid var(--card-line);
+    background: #fbfefd;
+    border-radius: 20px;
+    padding: 18px 8px 14px;
+    transition: .2s;
+}
+
+.btn-num:hover:not(:disabled) {
+    transform: translateY(-4px);
+    border-color: var(--teal);
+    background: #f4fbfa;
+}
+
+.btn-num .num {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--teal-deep);
+}
+
+.btn-num .stars {
+    color: var(--amber);
+}
+
+.btn-reset {
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(120deg, var(--teal), var(--sage));
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
