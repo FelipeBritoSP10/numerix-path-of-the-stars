@@ -38,6 +38,28 @@ O projeto atua diretamente na redução da "ansiedade matemática", oferecendo:
 - **Lógica:** Vanilla JavaScript (ES6+).
 - **Framework:** Bootstrap 5.3 para estruturação ágil.
 
+## 🎮 Como Jogar
+
+O **Numerix // Trilha das Estrelas** possui uma mecânica intuitiva focada em raciocínio rápido e precisão matemática. Siga estas instruções para dominar a trilha:
+
+1.  **Início do Desafio:** Ao abrir a aplicação, você será apresentado à tela principal com o valor alvo definido.
+
+2.  **O Objetivo:** O seu objetivo é realizar somas sucessivas que totalizem exatamente o valor definido.
+
+3.  **Ação Estratégica:**
+    *   Selecione os números disponíveis na interface para compor a sua soma.
+    *   Cada clique adiciona o valor à sua pontuação acumulada, que é exibida em tempo real na tela.
+
+4.  **Regra de Ouro (Evite o Erro):**
+    *   **Não ultrapasse o valor definido:** Caso a soma dos números escolhidos exceda o valor alvo, o desafio é considerado perdido e você deverá reiniciar a tentativa.
+    *   **Acerte na Mosca:** O sucesso é alcançado ao atingir a meta exata.
+
+5.  **Feedback:**
+    *   Ao atingir o objetivo, o sistema ativará o **Engine de Recompensa** com efeitos visuais para celebrar a sua vitória.
+    *   Em caso de erro, a interface oferece feedback imediato para que você possa analisar onde o cálculo excedeu o limite e tentar novamente com mais atenção.
+
+> **Dica do Desenvolvedor:** Mantenha o foco na contagem mental. O Numerix foi desenhado para treinar a sua agilidade; quanto mais você pratica, mais rápido seu cérebro processa os complementos necessários para chegar ao 10!
+
 ## 🚀 Como Executar
 O projeto não requer build ou pré-processadores. Siga os passos abaixo no seu terminal:
 
