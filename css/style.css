@@ -1,193 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Baloo+2:wght@500;600;700;800&display=swap');
-
 :root {
-    --bg-a: #eef6f5;
-    --bg-b: #e2f0ee;
-    --ink: #233b3f;
-    --ink-soft: #5c7377;
-    --teal: #2f8f8a;
-    --teal-deep: #1f6d69;
-    --sage: #6fae76;
-    --sage-deep: #4f8a56;
-    --amber: #e0a541;
-    --card-line: #dcece9;
-    --focus: #164b47;
+    --bg-page: #f0f4f8;
+    --card-bg: #ffffff;
+    --card-border: #cbd5e1;
+    --primary-main: #0284c7;
+    --primary-light: #e0f2fe;
+    --primary-border: #7dd3fc;
+    --success-main: #16a34a;
+    --success-light: #dcfce7;
+    --danger-main: #991b1b;
+    --danger-light: #fee2e2;
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+    --focus-ring: 4px solid #0284c7;
 }
 
 body {
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    background: linear-gradient(180deg, var(--bg-a), var(--bg-b));
-    color: var(--ink);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Fredoka', cursive, sans-serif;
     min-height: 100vh;
 }
 
-.titulo-projeto {
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
-    font-size: 2.9rem;
-    color: var(--teal-deep);
-}
-
-.subtitle {
-    color: var(--ink-soft);
-    font-size: 1.15rem;
-}
-
 .card-numerix {
-    border-radius: 32px !important;
-    box-shadow: 0 10px 30px rgba(31, 109, 105, 0.08);
+    background-color: var(--card-bg);
+    border: 3px solid var(--card-border);
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
 }
 
-.meta-label {
-    font-family: 'Baloo 2', sans-serif;
+.titulo-projeto, .titulo-home {
+    color: var(--primary-main);
     font-weight: 700;
-    color: var(--teal-deep);
-    font-size: 1.3rem;
-}
-
-.mascote {
-    width: 96px;
-    height: 96px;
-    transition: transform .3s ease;
-}
-
-.mascote.bounce {
-    animation: bounce .5s ease;
-}
-
-@keyframes bounce {
-    0% {
-        transform: scale(1);
-    }
-
-    40% {
-        transform: scale(1.18);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-.slot {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #eef6f5;
-    border: 2.5px solid var(--card-line);
-    font-weight: 700;
-    color: #9db3b1;
-    transition: .3s;
-}
-
-.slot.filled {
-    background: var(--teal);
-    border-color: var(--teal-deep);
-    color: white;
-    transform: scale(1.06);
-}
-
-.slot.filled.win {
-    background: var(--sage);
-    border-color: var(--sage-deep);
-    animation: pulse-slot .6s ease;
-}
-
-@keyframes pulse-slot {
-    0% {
-        transform: scale(1.06);
-    }
-
-    50% {
-        transform: scale(1.22);
-    }
-
-    100% {
-        transform: scale(1.06);
-    }
 }
 
 .total-box {
-    width: 128px;
-    height: 128px;
+    width: 115px;
+    height: 115px;
+    background-color: var(--primary-light);
+    border: 4px solid var(--primary-border);
     border-radius: 50%;
-    background: #ffffff;
-    border: 5px solid var(--teal);
-    box-shadow: 0 8px 20px rgba(47, 143, 138, 0.18);
 }
 
-.total-box span {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 2.9rem;
-    font-weight: 800;
-    color: var(--teal-deep);
-}
-
-.feedback {
-    font-size: 1.2rem;
+#total-numero {
+    font-size: 3.4rem;
     font-weight: 700;
-    color: var(--ink);
-    min-height: 1.7em;
+    color: var(--primary-main);
 }
 
-.feedback.win {
-    color: var(--sage-deep);
+.trilha-passo {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
-.btn-num {
-    border: 2.5px solid var(--card-line);
-    background: #fbfefd;
+.trilha-passo.active {
+    background-color: #bae6fd;
+    border-color: var(--primary-main);
+    color: var(--primary-main);
+    transform: scale(1.06);
+}
+
+.trilha-passo.win {
+    background-color: var(--success-light);
+    border-color: var(--success-main);
+    color: var(--success-main);
+}
+
+.btn-val {
+    font-size: 1.8rem;
+    font-weight: 700;
     border-radius: 20px;
-    padding: 18px 8px 14px;
-    transition: .2s;
+    padding: 16px;
+    background-color: var(--primary-light);
+    border: 3px solid var(--primary-border);
+    color: var(--primary-main);
+    transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
-.btn-num:hover:not(:disabled) {
-    transform: translateY(-4px);
-    border-color: var(--teal);
-    background: #f4fbfa;
+.btn-val:hover:not(:disabled) {
+    background-color: #bae6fd;
+    color: #0369a1;
 }
 
-.btn-num .num {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 1.7rem;
-    font-weight: 800;
-    color: var(--teal-deep);
+.btn-val:active:not(:disabled) {
+    transform: scale(0.97);
 }
 
-.btn-num .stars {
-    color: var(--amber);
+.btn-val:disabled {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+    color: #cbd5e1;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-card-fase {
+    cursor: pointer;
+    border-width: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-card-fase:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+}
+
+.btn-card-fase:active {
+    transform: translateY(0);
 }
 
 .btn-reset {
-    border: none;
-    border-radius: 999px;
-    background: linear-gradient(120deg, var(--teal), var(--sage));
-    color: white;
+    background-color: var(--danger-light);
+    border: 2px solid #fca5a5;
+    color: var(--danger-main);
     font-weight: 700;
-    padding: 15px;
+    border-radius: 16px;
 }
 
-.confetti-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 9999;
+.btn-reset:hover {
+    background-color: #fecaca;
 }
 
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    animation: fall linear forwards;
+.feedback {
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
-@keyframes fall {
-    to {
-        transform: translateY(100vh) rotate(720deg);
+.feedback.win {
+    color: var(--success-main);
+    font-weight: 700;
+}
+
+button:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
